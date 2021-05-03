@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
 class JwtMiddlewareServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
+     * Register services.~
      *
      * @return void
      */
