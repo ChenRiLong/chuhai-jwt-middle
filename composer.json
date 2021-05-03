@@ -6,12 +6,5 @@
             "email": "wochenrilong@qq.com"
         }
     ],
-    "require": {},
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Chuhai\\JwtMiddleware\\JwtMiddlewareServiceProvider"
-            ]
-        }
-    }
+    "require": {}
 }
