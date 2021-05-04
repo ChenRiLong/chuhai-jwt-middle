@@ -48,7 +48,7 @@ class CheckToken extends BaseMiddleware
                 // 刷新用户的 token
                 $token = $this->auth->refresh();
 
-                $user = JWTAuth::parseToken()->authenticate();
+                $user = auth('api')->user();
 
                 if ($user) {
                     define('USER_ID', $user->id);
