@@ -33,7 +33,8 @@ class CheckToken extends BaseMiddleware
 
                 if ($user) {
                     define('USER_ID', $user->id);
-                    define('TEAM_ID', $user->parsent_team_id);
+                    define('PRESENT_TEAM_ID', $user->present_team_id);
+                    define('TEAM_ID', $user->team_id);
                 } else {
                     return response()->json(['message' => 'token error']);
                 }
@@ -52,7 +53,8 @@ class CheckToken extends BaseMiddleware
 
                 if ($user) {
                     define('USER_ID', $user->id);
-                    define('TEAM_ID', $user->parsent_team_id);
+                    define('PRESENT_TEAM_ID', $user->present_team_id);
+                    define('TEAM_ID', $user->team_id);
                 } else {
                     return response()->json(['message' => 'token error']);
                 }
