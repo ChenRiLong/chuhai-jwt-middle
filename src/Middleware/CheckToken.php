@@ -36,7 +36,7 @@ class CheckToken extends BaseMiddleware
                     define('PRESENT_TEAM_ID', $user->present_team_id);
                     define('TEAM_ID', $user->team_id);
                 } else {
-                    return response()->json(['message' => 'token error']);
+                    return response()->json(['message' => 'token error1'], 401);
                 }
 
                 return $next($request);
@@ -56,7 +56,7 @@ class CheckToken extends BaseMiddleware
                     define('PRESENT_TEAM_ID', $user->present_team_id);
                     define('TEAM_ID', $user->team_id);
                 } else {
-                    return response()->json(['message' => 'token error']);
+                    return response()->json(['message' => 'token error2'], 401);
                 }
 
                 // 使用一次性登录以保证此次请求的成功
@@ -64,7 +64,7 @@ class CheckToken extends BaseMiddleware
             } catch (JWTException $exception) {
                 // 如果捕获到此异常，即代表 refresh 也过期了，用户无法刷新令牌，需要重新登录。
 //                throw new UnauthorizedHttpException('jwt-auth', $exception->getMessage());
-                return response()->json(['message' => 'token error']);
+                return response()->json(['message' => 'token error3'], 401);
             }
         }
 

@@ -6,6 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Chuhai\\JwtMiddleware\\JwtMiddlewareServiceProvider' => $baseDir . '/src/JwtMiddlewareServiceProvider.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

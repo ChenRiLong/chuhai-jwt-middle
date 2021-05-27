@@ -21,7 +21,6 @@ class ComposerStaticInit5f692005ff1f3d618d1a3791d53bcb95
     );
 
     public static $classMap = array (
-        'Chuhai\\JwtMiddleware\\JwtMiddlewareServiceProvider' => __DIR__ . '/../..' . '/src/JwtMiddlewareServiceProvider.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
